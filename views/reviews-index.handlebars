@@ -1,0 +1,20 @@
+<!-- views/reviews-index.handlebars -->
+
+<h1>Reviews</h1>
+
+<div class="row">
+  {{#each reviews}}
+    <div class="col-md-3">
+
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">{{this.title}}</h5>
+            <p class="card-text">
+                {{this.movieTitle}}
+            </p>
+            <a href="/reviews/{{this._id}}" class="btn btn-primary">Go</a>
+          </div>
+        </div>
+    </div>
+  {{/each}}
+</div>
